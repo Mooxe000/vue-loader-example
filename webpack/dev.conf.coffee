@@ -1,9 +1,8 @@
-var config = require('./webpack.base.config')
+config = require './base.conf'
 
 config.devtool = 'eval-source-map'
 
-config.devServer = {
+config.devServer =
   noInfo: false
-}
 
 module.exports = config

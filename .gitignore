@@ -1,3 +1,12 @@
 .DS_Store
-node_modules
-dist
+.idea
+npm-debug.log
+*_book
+.tags*
+
+.tmp
+trash
+
+/**/node_modules
+/**/dist
+/**/build

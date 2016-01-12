@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './src/main.js',
+  entry: './src/main.coffee',
   output: {
     path: './dist',
     publicPath: 'dist/',
@@ -18,6 +18,11 @@ module.exports = {
         exclude: /node_modules/
       },
       {
+        test: /\.coffee$/,
+        loader: 'coffee-loader',
+        exclude: /node_modules/
+      },
+      {
         // edit this for additional asset file types
         test: /\.(png|jpg|gif)$/,
         loader: 'url',
@@ -33,9 +38,9 @@ module.exports = {
   // vue-loader config:
   // lint all JavaScript inside *.vue files with ESLint
   // make sure to adjust your .eslintrc
-  vue: {
-    loaders: {
-      js: 'babel!eslint'
-    }
-  }
+  // vue: {
+  //   loaders: {
+  //     js: 'babel!eslint'
+  //   }
+  // }
 }
